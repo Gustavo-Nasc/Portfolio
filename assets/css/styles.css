@@ -389,6 +389,150 @@ img {
 }
 
 /*==================== SKILLS ====================*/
+.skills__container {
+  row-gap: 0;
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skills__icon {
+  margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+}
+
+.skills__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+
+.skill__titles-name-icon {
+  display: flex;
+}
+
+.skills__titles-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+  font-size: var(--normal-font-size);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: var(--first-color-lighter);
+}
+
+.skills__percentage {
+  display: block;
+  background-color: var(--first-color);
+}
+
+.skills__html {
+  width: 80%;
+}
+
+.skills__css {
+  width: 78%;
+}
+
+.skills__js {
+  width: 32%;
+}
+
+.skills__react {
+  width: 0%;
+}
+
+.skills__php {
+  width: 20%;
+}
+
+.skills__node {
+  width: 0%;
+}
+
+.skills__firebase {
+  width: 0%;
+}
+
+.skills__angular {
+  width: 0%;
+}
+
+.skills__react-native {
+  width: 0%;
+}
+
+/*==================== SKILLS ICONS ====================*/
+.skills__icon-html {
+  color: #ec6231;
+}
+
+.skills__icon-css {
+  color: #2965f1;
+}
+
+.skills__icon-js {
+  color: #f0db4f;
+}
+
+.skills__icon-react {
+  color: #61dbf6;
+}
+
+.skills__icon-php {
+  color: #474a8a;
+}
+
+.skills__icon-node {
+  color: #3c873a;
+}
+
+.skills__icon-firebase {
+  color: #ffa611;
+}
+
+.skills__icon-angular {
+  color: #a6120d;
+}
 
 /*==================== QUALIFICATION ====================*/
 
