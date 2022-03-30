@@ -19,7 +19,7 @@ O Website Portfolio Responsivo é uma aplicação pessoal de constante atualiza�
 
 ## 📹 Vídeo Demonstrativo
 
-No meu LinkedIn tem um breve vídeo de como a plataforma funciona:
+No meu LinkedIn tem um breve vídeo de como a aplicação funciona:
 
 ## ✍ Quer criar e personalizar o seu Portfólio?
 
