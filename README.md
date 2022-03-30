@@ -17,7 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Website Portfolio Responsivo é uma aplicação pessoal de constante atualização, onde será feita a publicação e divulgação pessoal
 
-## 📹Vídeo Demonstrativo
+## 📹 Vídeo Demonstrativo
 
 No meu LinkedIn tem um breve vídeo de como a plataforma funciona:
 
