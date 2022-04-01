@@ -343,6 +343,15 @@ img {
   transition: 0.3s;
 }
 
+.button--white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+
+.button--white:hover {
+  background-color: #fff;
+}
+
 .button--flex {
   display: inline-flex;
   align-items: center;
@@ -769,6 +778,16 @@ img {
   transform: translateX(0.25rem);
 }
 
+.portfolio__more {
+  justify-content: center;
+  align-items: center;
+  padding: 9.5rem 0 0 0;
+}
+
+.portfolio__more .portfolio__button {
+  align-self: flex-end;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";
@@ -802,6 +821,33 @@ img {
 }
 
 /*==================== PROJECT IN MIND ====================*/
+.project {
+  text-align: center;
+}
+
+.project__bg {
+  background-color: var(--first-color);
+  padding: 3rem 0 3rem 0;
+}
+
+.project__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.project__description {
+  margin-bottom: var(--mb-1-5);
+}
+
+.project__title,
+.project__description {
+  color: #fff;
+}
+
+.project__img {
+  width: 232px;
+  justify-self: center;
+}
 
 /*==================== TESTIMONIAL ====================*/
 
