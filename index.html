@@ -141,9 +141,9 @@
                 </div>
 
                 <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
+                    <a href="#rating" class="home__scroll-button button--flex">
                         <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Rolar para baixo</span>
+                        <span class="home__scroll-name">Avalie a página!</span>
                         <i class="uil uil-arrow-down home__scroll-arrow"></i>
                     </a>
                 </div>
@@ -606,7 +606,8 @@
                 <div class="swiper-wrapper">
                     <!--==================== PORTFOLIO 1 ====================-->
                     <div class="portfolio__content grid swiper-slide">
-                        <video src="" autoplay loop class="portfolio__video"></video>
+                        <video src="./assets/video/portfolio-project1.mp4" autoplay loop muted
+                            class="portfolio__video"></video>
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Dev.finance$</h3>
@@ -655,7 +656,7 @@
                         </div>
                     </div>
 
-                    <!--==================== PORTFOLIO 3 ====================-->
+                    <!--==================== PORTFOLIO 4 ====================-->
                     <div class="portfolio__content grid swiper-slide portfolio__more">
                         <div class="portfolio__data">
                             <a href="./assets/html/projects.html"
@@ -687,7 +688,8 @@
                 <div class="project__container container grid">
                     <div class="project__data">
                         <h2 class="project__title">Desafio "Social Tree"</h2>
-                        <p class="project__description">Desafio proposto pela Rockeatseat! E aí? Bora codar?</p>
+                        <p class="project__description">Desafio proposto pela Rockeatseat, na Maratona Discover! E aí?
+                            Bora codar?</p>
                         <a href="https://efficient-sloth-d85.notion.site/Desafio-Social-Tree-a4008e467a3248c4b05c97cf78aea44f"
                             class="button button--flex button--white">
                             Mais detalhes
@@ -700,14 +702,175 @@
             </div>
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section" id="comments">
+        <!--==================== COMMENTS ====================-->
+        <section class="comments section" id="comments">
+            <h2 class="section__title">Comentários</h2>
+            <span class="section__subtitle">Últimas opinões públicas sobre o Projeto</span>
 
+            <div class="comments__container container swiper-container" id="swiper-comments">
+                <div class="swiper-wrapper">
+                    <!--==================== COMMENTS 1 ====================-->
+                    <div class="comments__content swiper-slide">
+                        <div class="comments__data">
+                            <div class="comments__header">
+                                <img src="./assets/img/comments1.jpg" alt="" class="comments__img">
+
+                                <div>
+                                    <h3 class="comments__name">User1</h3>
+                                    <span class="comments__client">Aluna</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-star comments__icon-star star-fill"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="comments__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
+                            ultricies mollis at, hendrerit id libero. Praesent congue.
+                        </p>
+                    </div>
+
+                    <!--==================== COMMENTS 2 ====================-->
+                    <div class="comments__content swiper-slide">
+                        <div class="comments__data">
+                            <div class="comments__header">
+                                <img src="./assets/img/comments2.jpg" alt="" class="comments__img">
+
+                                <div>
+                                    <h3 class="comments__name">User2</h3>
+                                    <span class="comments__client">Aluno</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="comments__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
+                            ultricies mollis at, hendrerit id libero. Praesent congue.
+                        </p>
+                    </div>
+
+                    <!--==================== COMMENTS 3 ====================-->
+                    <div class="comments__content swiper-slide">
+                        <div class="comments__data">
+                            <div class="comments__header">
+                                <img src="./assets/img/comments3.jpg" alt="" class="comments__img">
+
+                                <div>
+                                    <h3 class="comments__name">User3</h3>
+                                    <span class="comments__client">Aluno</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
+                            </div>
+                        </div>
+
+                        <p class="comments__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
+                            ultricies mollis at, hendrerit id libero. Praesent congue.
+                        </p>
+                    </div>
+                </div>
+
+                <!--==================== PAGINATION ====================-->
+                <div class="swiper-pagination swiper-pagination-comments"></div>
+            </div>
         </section>
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
+            <h2 class="section__title">Fale Comigo</h2>
+            <span class="section__subtitle">Entre em contato comigo</span>
 
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Me liga!</h3>
+                            <span class="contact__subtitle">(11) 97649-5898</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">E-mail</h3>
+                            <span class="contact__subtitle">gustavo.ns@outlook.com.br</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Endereço</h3>
+                            <span class="contact__subtitle">Avenida Aricanduva, 8256 - São Paulo - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== RATING ====================-->
+        <section class="rating section" id="rating">
+
+            <h2 class="section__title">Avaliação</h2>
+            <span class="section__subtitle">Avalie o projeto, dê uma nota</span>
+
+            <div class="rating__container container grid">
+                <form action="" class="rating__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="rating__content">
+                            <label for="" class="rating__label">Nome</label>
+                            <input type="text" class="rating__input">
+                        </div>
+
+                        <div class="rating__content">
+                            <label for="file" class="rating__label">Foto</label>
+                            <input type="file" class="rating__input" id="file">
+                        </div>
+
+                        <div class="rating__content">
+                            <label for="" class="rating__label">E-mail</label>
+                            <input type="text" class="rating__input">
+                        </div>
+
+                        <div class="rating__content">
+                            <label for="" class="rating__label">Mensagem</label>
+                            <textarea name="" id="" cols="0" rows="7" class="rating__input"></textarea>
+                        </div>
+
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Enviar mensagem
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -718,6 +881,9 @@
 
     <!--==================== SCROLL TOP ====================-->
 
+
+    <!--==================== AUDIO START ====================-->
+    <audio src="./assets/audio/audio-start.mp3" id="audio-start" onloadstart="setVolume()" autoplay loop></audio>
 
     <!--==================== SWIPER JS ====================-->
     <script src="./assets/js/swiper-bundle.min.js"></script>

@@ -92,7 +92,7 @@ modalCloses.forEach((modalClose, i) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container', {
+let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
     navigation: {
@@ -106,6 +106,31 @@ let swiper = new Swiper('.portfolio__container', {
 });
 
 /*==================== TESTIMONIAL ====================*/
+let swiper = new Swiper('.comments__container', {
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+});
+
+/*==================== AUDIO ====================*/
+const audio = document.getElementById("audio-start")
+
+function setVolume() {
+    audio.volume = 0.1
+}
+
+function stopAudio() {
+    audio.pause()
+}
+
+function resumeAudio() {
+    audio.play()
+}
+
+/*==================== ADD RATING ====================*/
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
