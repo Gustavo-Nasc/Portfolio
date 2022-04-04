@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--==================== UNICONS ====================-->
+    <!--==================== UNICONS LINE ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!--==================== SWIPER CSS ====================-->
@@ -26,7 +26,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i> Início
                         </a>
                     </li>
@@ -83,6 +83,9 @@
             </div>
 
             <div class="nav__btns">
+                <!-- Botão de Mudar Tema -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
@@ -143,7 +146,7 @@
                 <div class="home__scroll">
                     <a href="#rating" class="home__scroll-button button--flex">
                         <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Avalie a página!</span>
+                        <span class="home__scroll-name">Avalie o projeto!</span>
                         <i class="uil uil-arrow-down home__scroll-arrow"></i>
                     </a>
                 </div>
@@ -435,7 +438,6 @@
                             <div></div>
                             <div>
                                 <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
                             </div>
                             <div>
                                 <h3 class="qualification__title">Desenvolvimento de Software Multiplataforma</h3>
@@ -455,7 +457,6 @@
                             <div></div>
                             <div>
                                 <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
                             </div>
                             <div>
                                 <h3 class="qualification__title">#OpenToWork</h3>
@@ -656,15 +657,18 @@
                         </div>
                     </div>
 
-                    <!--==================== PORTFOLIO 4 ====================-->
-                    <div class="portfolio__content grid swiper-slide portfolio__more">
-                        <div class="portfolio__data">
-                            <a href="./assets/html/projects.html"
-                                class="button button--flex button--small button--link portfolio__button"
-                                target="_blank">
-                                Mais Projetos
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+
+                    <div class="swiper-slide swiper-more">
+                        <!--==================== PORTFOLIO 4 ====================-->
+                        <div class="portfolio__content grid portfolio__more">
+                            <div class="portfolio__data">
+                                <a href="./assets/html/projects.html"
+                                    class="button button--flex button--small button--link portfolio__button portfolio__more"
+                                    target="_blank">
+                                    Mais Projetos
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -705,9 +709,9 @@
         <!--==================== COMMENTS ====================-->
         <section class="comments section" id="comments">
             <h2 class="section__title">Comentários</h2>
-            <span class="section__subtitle">Últimas opinões públicas sobre o Projeto</span>
+            <span class="section__subtitle">Últimos comentários sobre o Projeto</span>
 
-            <div class="comments__container container swiper-container" id="swiper-comments">
+            <div class="comments__container container swiper-container">
                 <div class="swiper-wrapper">
                     <!--==================== COMMENTS 1 ====================-->
                     <div class="comments__content swiper-slide">
@@ -722,7 +726,7 @@
                             </div>
 
                             <div>
-                                <i class="uil uil-star comments__icon-star star-fill"></i>
+                                <i class="uil uil-star comments__icon-star"></i>
                                 <i class="uil uil-star comments__icon-star"></i>
                                 <i class="uil uil-star comments__icon-star"></i>
                                 <i class="uil uil-star comments__icon-star"></i>
@@ -837,36 +841,31 @@
         <section class="rating section" id="rating">
 
             <h2 class="section__title">Avaliação</h2>
-            <span class="section__subtitle">Avalie o projeto, dê uma nota</span>
+            <span class="section__subtitle">Avalie o projeto, deixe um comentário</span>
 
             <div class="rating__container container grid">
                 <form action="" class="rating__form grid">
                     <div class="contact__inputs grid">
                         <div class="rating__content">
-                            <label for="" class="rating__label">Nome</label>
-                            <input type="text" class="rating__input">
+                            <label for="name" class="rating__label">Nome</label>
+                            <input type="text" class="rating__input" id="name" name="name">
                         </div>
 
                         <div class="rating__content">
-                            <label for="file" class="rating__label">Foto</label>
-                            <input type="file" class="rating__input" id="file">
+                            <label for="photo" class="rating__label">Foto</label>
+                            <input type="file" class="rating__input" id="photo" name="photo">
                         </div>
 
                         <div class="rating__content">
-                            <label for="" class="rating__label">E-mail</label>
-                            <input type="text" class="rating__input">
-                        </div>
-
-                        <div class="rating__content">
-                            <label for="" class="rating__label">Mensagem</label>
-                            <textarea name="" id="" cols="0" rows="7" class="rating__input"></textarea>
+                            <label for="comment" class="rating__label">Comentário</label>
+                            <textarea name="comment" id="comment" cols="0" rows="7" class="rating__input"></textarea>
                         </div>
 
                         <div>
-                            <a href="#" class="button button--flex">
-                                Enviar mensagem
+                            <button class="button button--flex" id="send" onclick="sendInformation.open()">
+                                Enviar comentário
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -876,17 +875,58 @@
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Gustavo N. Souza</h1>
+                    <span class="footer__subtitle">Desenvolvedor Front-End</span>
+                </div>
 
+                <ul class="footer__links">
+                    <li>
+                        <a href="#services" class="footer__link">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Fale Comigo</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/profile.php?id=100017365989262" target="_blank"
+                        class="footer__social">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/gustanascsouza/" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+
+                    <a href="https://twitter.com/gustanascsouza" target="_blank" class="footer__social">
+                        <i class="uil uil-twitter-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Bedimcode. Todos os direitos reservados</p>
+        </div>
     </footer>
 
     <!--==================== SCROLL TOP ====================-->
-
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-angle-up scrollup__icon"></i>
+    </a>
 
     <!--==================== AUDIO START ====================-->
-    <audio src="./assets/audio/audio-start.mp3" id="audio-start" onloadstart="setVolume()" autoplay loop></audio>
+    <audio src="./assets/audio/audio-start.mp3" id="audio-start" onload="setVolume()" autoplay loop></audio>
 
     <!--==================== SWIPER JS ====================-->
     <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== GET VALUES FORM JS ====================-->
+    <script src="./assets/js/get-values.js"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
