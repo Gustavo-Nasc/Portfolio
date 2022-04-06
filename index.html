@@ -21,7 +21,7 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="" class="nav__logo">Gustavo</a>
+            <a href="" class="nav__logo">Gustavo N. S.</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
@@ -128,13 +128,13 @@
                                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                                <image class="home__blob-img" x='12' y='18' href="./assets/img/perfil.png">
+                                <image class="home__blob-img" x='20' y='15' href="./assets/img/perfil.png">
                             </g>
                         </svg>
                     </div>
 
                     <div class="home__data">
-                        <h1 class="home__title">Olá, me chamo Gustavo!</h1>
+                        <h1 class="home__title">Olá, sou o Gustavo!</h1>
                         <h3 class="home__subtitle">Desenvolvedor Front-End</h3>
                         <p class="home__description">Sempre buscando evolução e #OpenToWork</p>
                         <a href="#contact" class="button button--flex">
@@ -619,9 +619,9 @@
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Dev.finance$</h3>
                             <p class="portfolio__description">
-                                Website criado por meio da Plataforma Rocketseat. Se trata
-                                de uma plataforma de Controle Financeiro Pessoal, onde o usuário pode inserir despesas e
-                                faturamento
+                                Website criado por meio da Plataforma
+                                <span class="reference">Rocketseat</span>. Uma plataforma de Controle Financeiro
+                                Pessoal
                             </p>
                             <a href="https://github.com/Gustavo-Nasc/Rockeatseat-Maratora01-Discover"
                                 class="button button--flex button--small portfolio__button" target="_blank">
@@ -666,9 +666,10 @@
 
                     <div class="swiper-slide swiper-more">
                         <!--==================== PORTFOLIO 4 ====================-->
-                        <div class="portfolio__content grid">
+                        <div class="portfolio__content">
                             <div class="portfolio__data">
-                                <a href="#" class="button button--flex button--small portfolio__button" target="_blank">
+                                <a href="./assets/html/projects.html"
+                                    class="button button--flex button--small portfolio__button" target="_blank">
                                     Mais projetos
                                     <i class="uil uil-plus button__icon"></i>
                                 </a>
@@ -699,7 +700,7 @@
                         <p class="project__description">Desafio proposto pela Rockeatseat, na Maratona Discover! E aí?
                             Bora codar?</p>
                         <a href="https://efficient-sloth-d85.notion.site/Desafio-Social-Tree-a4008e467a3248c4b05c97cf78aea44f"
-                            class="button button--flex button--white">
+                            class="button button--flex button--white" target="_blank">
                             Mais detalhes
                             <i class="uil uil-message project__icon button__icon"></i>
                         </a>
@@ -809,33 +810,31 @@
             <h2 class="section__title">Fale Comigo</h2>
             <span class="section__subtitle">Entre em contato comigo</span>
 
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
+            <div class="contact__container container">
+                <div class="contact__information">
+                    <i class="uil uil-phone contact__icon"></i>
 
-                        <div>
-                            <h3 class="contact__title">Me liga!</h3>
-                            <span class="contact__subtitle">(11) 97649-5898</span>
-                        </div>
+                    <div>
+                        <h3 class="contact__title">Me liga!</h3>
+                        <span class="contact__subtitle">(11) 97649-5898</span>
                     </div>
+                </div>
 
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
 
-                        <div>
-                            <h3 class="contact__title">E-mail</h3>
-                            <span class="contact__subtitle">gustavo.ns@outlook.com.br</span>
-                        </div>
+                    <div>
+                        <h3 class="contact__title">E-mail</h3>
+                        <span class="contact__subtitle">gustavo.ns@outlook.com.br</span>
                     </div>
+                </div>
 
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
+                <div class="contact__information">
+                    <i class="uil uil-map-marker contact__icon"></i>
 
-                        <div>
-                            <h3 class="contact__title">Endereço</h3>
-                            <span class="contact__subtitle">Avenida Aricanduva, 8256 - São Paulo - SP</span>
-                        </div>
+                    <div>
+                        <h3 class="contact__title">Endereço</h3>
+                        <span class="contact__subtitle">Avenida Aricanduva, 8256 - São Paulo - SP</span>
                     </div>
                 </div>
             </div>
@@ -923,17 +922,14 @@
         <i class="uil uil-angle-up scrollup__icon"></i>
     </a>
 
-    <!--==================== AUDIO START ====================-->
-    <audio src="./assets/audio/audio-start.mp3" id="audio-start" onload="setVolume()" autoplay loop></audio>
-
     <!--==================== SWIPER JS ====================-->
     <script src="./assets/js/swiper-bundle.min.js"></script>
 
-    <!--==================== GET VALUES FORM JS ====================-->
-    <script src="./assets/js/get-values.js"></script>
-
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
+
+    <!--==================== GET VALUES FORM JS ====================-->
+    <script src="./assets/js/get-values.js"></script>
 </body>
 
 </html>

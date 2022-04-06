@@ -115,21 +115,6 @@ let swiper = new Swiper('.comments__container', {
     },
 });
 
-/*==================== AUDIO ====================*/
-const audio = document.getElementById("audio-start")
-
-function setVolume() {
-    audio.volume = 0.1
-}
-
-function stopAudio() {
-    audio.pause()
-}
-
-function resumeAudio() {
-    audio.play()
-}
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
