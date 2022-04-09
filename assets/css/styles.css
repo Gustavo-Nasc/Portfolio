@@ -916,21 +916,18 @@ img {
   font-weight: var(--font-medium);
 }
 
-.comments__client {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-
 .comments__description {
   margin-bottom: var(--mb-2-5);
 }
 
-.comments__icon-star {
+.comments__icon {
   color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.comments__icon-star .star-fill {
-  background-color: var(--first-color);
+.comments__icon {
+  color: var(--first-color-alt);
 }
 
 .swiper-container .swiper-pagination-comments {

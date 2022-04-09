@@ -717,87 +717,8 @@
             <span class="section__subtitle">Últimos comentários sobre o Projeto</span>
 
             <div class="comments__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!--==================== COMMENTS 1 ====================-->
-                    <div class="comments__content swiper-slide">
-                        <div class="comments__data">
-                            <div class="comments__header">
-                                <img src="./assets/img/comments1.jpg" alt="" class="comments__img">
+                <div class="swiper-wrapper" id="swiper-comments">
 
-                                <div>
-                                    <h3 class="comments__name">User1</h3>
-                                    <span class="comments__client">Aluna</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="comments__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
-                            ultricies mollis at, hendrerit id libero. Praesent congue.
-                        </p>
-                    </div>
-
-                    <!--==================== COMMENTS 2 ====================-->
-                    <div class="comments__content swiper-slide">
-                        <div class="comments__data">
-                            <div class="comments__header">
-                                <img src="./assets/img/comments2.jpg" alt="" class="comments__img">
-
-                                <div>
-                                    <h3 class="comments__name">User2</h3>
-                                    <span class="comments__client">Aluno</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="comments__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
-                            ultricies mollis at, hendrerit id libero. Praesent congue.
-                        </p>
-                    </div>
-
-                    <!--==================== COMMENTS 3 ====================-->
-                    <div class="comments__content swiper-slide">
-                        <div class="comments__data">
-                            <div class="comments__header">
-                                <img src="./assets/img/comments3.jpg" alt="" class="comments__img">
-
-                                <div>
-                                    <h3 class="comments__name">User3</h3>
-                                    <span class="comments__client">Aluno</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                                <i class="uil uil-star comments__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="comments__description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tortor nunc, auctor
-                            ultricies mollis at, hendrerit id libero. Praesent congue.
-                        </p>
-                    </div>
                 </div>
 
                 <!--==================== PAGINATION ====================-->
@@ -840,14 +761,14 @@
             </div>
         </section>
 
-        <!--==================== RATING ====================-->
+        <!--==================== LEAVE A COMMENT ====================-->
         <section class="rating section" id="rating">
 
             <h2 class="section__title">Avaliação</h2>
             <span class="section__subtitle">Avalie o projeto, deixe um comentário</span>
 
             <div class="rating__container container grid">
-                <form action="" class="rating__form grid">
+                <form action="" class="rating__form grid" onsubmit="Form.submit(event)">
                     <div class="contact__inputs grid">
                         <div class="rating__content">
                             <label for="name" class="rating__label">Nome</label>
@@ -856,7 +777,8 @@
 
                         <div class="rating__content">
                             <label for="photo" class="rating__label">Foto</label>
-                            <input type="file" class="rating__input" id="photo" name="photo">
+                            <input type="file" class="rating__input" id="photo" name="photo"
+                                accept=".jpg, .jpeg, .gif, .png">
                         </div>
 
                         <div class="rating__content">
@@ -865,7 +787,7 @@
                         </div>
 
                         <div>
-                            <button class="button button--flex" id="send" onclick="sendInformation.open()">
+                            <button class="button button--flex">
                                 Enviar comentário
                                 <i class="uil uil-message button__icon"></i>
                             </button>
@@ -928,7 +850,7 @@
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
 
-    <!--==================== GET VALUES FORM JS ====================-->
+    <!--==================== COMMENTS JS ====================-->
     <script src="./assets/js/get-values.js"></script>
 </body>
 

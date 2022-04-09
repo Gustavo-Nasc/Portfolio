@@ -68,6 +68,7 @@ tabs.forEach(tab => {
         tab.classList.add('qualification__active')
     })
 })
+
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
     modalBtns = document.querySelectorAll('.services__button'),
@@ -105,13 +106,20 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     }
 });
 
-/*==================== TESTIMONIAL ====================*/
+/*==================== COMMENTS SWIPER ====================*/
 let swiper = new Swiper('.comments__container', {
-    loop: true,
-    grabCursor: true,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 
