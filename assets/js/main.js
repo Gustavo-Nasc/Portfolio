@@ -96,19 +96,22 @@ modalCloses.forEach((modalClose, i) => {
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    }
 });
 
 /*==================== COMMENTS SWIPER ====================*/
 let swiper = new Swiper('.comments__container', {
-    spaceBetween: 30,
+    grabCursor: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
@@ -116,11 +119,7 @@ let swiper = new Swiper('.comments__container', {
     pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    }
 });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/

@@ -717,7 +717,7 @@
             <span class="section__subtitle">Últimos comentários sobre o Projeto</span>
 
             <div class="comments__container container swiper-container">
-                <div class="swiper-wrapper" id="swiper-comments">
+                <div class="swiper-wrapper" id="swiper__comments">
 
                 </div>
 
@@ -746,7 +746,7 @@
 
                     <div>
                         <h3 class="contact__title">E-mail</h3>
-                        <span class="contact__subtitle">gustavo.ns@outlook.com.br</span>
+                        <span class="contact__subtitle">gustavo.ns@outlook.com.br | gunascousza@gmail.com</span>
                     </div>
                 </div>
 
@@ -776,9 +776,17 @@
                         </div>
 
                         <div class="rating__content">
-                            <label for="photo" class="rating__label">Foto</label>
-                            <input type="file" class="rating__input" id="photo" name="photo"
-                                accept=".jpg, .jpeg, .gif, .png">
+                            <label for="rating" class="rating__label">Nota de Avaliação</label>
+                            <div class="select__div">
+                                <select name="rating" id="rating" class="rating__select">
+                                    <option value="select" selected disabled>Selecione uma opção</option>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Bom">Bom</option>
+                                    <option value="Ótimo">Ótimo</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="rating__content">
