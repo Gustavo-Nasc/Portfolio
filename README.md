@@ -23,4 +23,7 @@ No meu LinkedIn tem um breve vídeo de como a aplicação funciona:
 
 ## ✍ Quer criar e personalizar o seu Portfólio?
 
-## [Faça você mesmo!](https://youtu.be/27JtRAI3QO8)
+[Faça você mesmo!](https://youtu.be/27JtRAI3QO8)
+
+<strong>Observação: </strong>
+Use e abuse dos seus conhecimentos, insira Features, mais Elementos e Crie uma GitHub Page para seu Portfólio!
