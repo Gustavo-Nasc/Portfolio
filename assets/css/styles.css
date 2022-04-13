@@ -936,38 +936,6 @@ img {
   bottom: 0;
 }
 
-/*==================== CONTACT ME ====================*/
-.contact__container {
-  row-gap: 3rem;
-}
-
-.contact__information {
-  display: flex;
-  margin-bottom: var(--mb-2);
-}
-
-.contact__icon {
-  font-size: 2rem;
-  color: var(--first-color);
-  margin-right: var(--mb-0-75);
-}
-
-.contact__title {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-.contact__subtile {
-  font-size: var(--small-font-size);
-  column-rule: var(--text-color-light);
-}
-
-.contact__content {
-  background-color: var(--input-color);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem 0.25rem;
-}
-
 /*==================== RATING ====================*/
 .rating__container {
   row-gap: 3rem;
@@ -1045,6 +1013,56 @@ form button {
   border: none;
   font-family: var(--body-font);
   cursor: pointer;
+}
+
+/*==================== CONTACT ====================*/
+.contact__container {
+  display: grid;
+  row-gap: 3rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+.contact__label {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+  resize: none;
 }
 
 /*==================== FOOTER ====================*/
@@ -1127,6 +1145,33 @@ form button {
 
 /* Show scroll */
 .show-scroll {
+  right: 1.66rem;
+  bottom: 10rem;
+}
+
+/*========== WHATSAPP ICON ==========*/
+.whatsapp {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  background-color: #34af23;
+  border-radius: 50%;
+  padding: 0.1rem 0.6rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  opacity: 0.8;
+}
+
+.whatsapp:hover {
+  opacity: 1;
+}
+
+.whtasapp__icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.show-whatsapp {
   bottom: 5rem;
 }
 
@@ -1225,6 +1270,7 @@ form button {
   .skills__container,
   .portfolio__content,
   .project__container,
+  .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1390,12 +1436,6 @@ form button {
   .comments__content {
     padding: 0 5rem;
   }
-
-  .contact__container {
-    display: grid;
-    row-gap: 0;
-    justify-content: center;
-  }
   
   .rating__container {
     padding: 0 5rem;
@@ -1473,6 +1513,14 @@ form button {
 
   .rating__container {
     padding: 0;
+  }
+  
+  .contact__form {
+    width: 460px;
+  }
+  
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

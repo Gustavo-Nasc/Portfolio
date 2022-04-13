@@ -726,41 +726,6 @@
             </div>
         </section>
 
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Fale Comigo</h2>
-            <span class="section__subtitle">Entre em contato comigo</span>
-
-            <div class="contact__container container">
-                <div class="contact__information">
-                    <i class="uil uil-phone contact__icon"></i>
-
-                    <div>
-                        <h3 class="contact__title">Me liga!</h3>
-                        <span class="contact__subtitle">(11) 97649-5898</span>
-                    </div>
-                </div>
-
-                <div class="contact__information">
-                    <i class="uil uil-envelope contact__icon"></i>
-
-                    <div>
-                        <h3 class="contact__title">E-mail</h3>
-                        <span class="contact__subtitle">gustavo.ns@outlook.com.br | gunascousza@gmail.com</span>
-                    </div>
-                </div>
-
-                <div class="contact__information">
-                    <i class="uil uil-map-marker contact__icon"></i>
-
-                    <div>
-                        <h3 class="contact__title">Endereço</h3>
-                        <span class="contact__subtitle">Avenida Aricanduva, 8256 - São Paulo - SP</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!--==================== LEAVE A COMMENT ====================-->
         <section class="rating section" id="rating">
 
@@ -769,7 +734,7 @@
 
             <div class="rating__container container grid">
                 <form action="" class="rating__form grid" onsubmit="Form.submit(event)">
-                    <div class="contact__inputs grid">
+                    <div class="rating__inputs grid">
                         <div class="rating__content">
                             <label for="name" class="rating__label">Nome</label>
                             <input type="text" class="rating__input" id="name" name="name">
@@ -800,6 +765,70 @@
                                 <i class="uil uil-message button__icon"></i>
                             </button>
                         </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Fale Comigo</h2>
+            <span class="section__subtitle">Entre em contato comigo</span>
+
+            <div class="contact__container container">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Me liga!</h3>
+                            <span class="contact__subtitle">(11) 97649-5898</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">E-mail</h3>
+                            <span class="contact__subtitle">gustavo.ns@outlook.com.br | gunascousza@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Endereço</h3>
+                            <span class="contact__subtitle">Avenida Aricanduva, 8256 - São Paulo - SP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="send-mail.php" method="post" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Nome</label>
+                            <input type="text" id="name" name="name" class="contact__input" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="email" class="contact__label">E-mail</label>
+                            <input type="email" id="email" name="email" class="contact__input" required>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="assunto" class="contact__label">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="contact__input" required>
+                    </div>
+                    <div class="contact__content">
+                        <label for="message" class="contact__label">Mensagem</label>
+                        <textarea name="message" id="message" cols="0" rows="7" class="contact__input"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="button button--flex">
+                            Enviar E-mail
+                            <i class="uil uil-message button__icon"></i>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -850,6 +879,11 @@
     <!--==================== SCROLL TOP ====================-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-angle-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== WHATSAPP ====================-->
+    <a href="https://wa.me/5511976495898" class="whatsapp" id="whatsapp" target="_blank">
+        <i class="uil uil-whatsapp whtasapp__icon"></i>
     </a>
 
     <!--==================== SWIPER JS ====================-->
