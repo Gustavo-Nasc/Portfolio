@@ -1529,3 +1529,7 @@ form button {
     grid-template-columns: 0.3fr;
   }
 }
+
+#body-send-email {
+  padding: 0.5rem 1.5rem;
+}

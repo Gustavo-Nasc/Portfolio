@@ -8,9 +8,9 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    require './assets/src/PHPMailer.php';
-    require './assets/src/SMTP.php';
-    require './assets/src/Exception.php';
+    require './PHPMailer.php';
+    require './SMTP.php';
+    require './Exception.php';
         
     $mail = new PHPMailer();
         
@@ -30,7 +30,7 @@
         $mail->addCC($email);
         $mail->addCC('gunascsouza@gmail.com');
 
-        $mail->Subject = 'Nova mensagem de Contato!';
+        $mail->Subject = 'Nova mensagem de Contato: ' . $subject;
 
         $mail->isHTML(true);
         $mail->Body = "
@@ -63,7 +63,7 @@
         </body>
         </html>
         ";
-        
+
         if($mail->send()) {
             echo "
                 <script>
@@ -93,7 +93,7 @@
     <title>E-mail enviado!</title>
 
     <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!--==================== UNICONS LINE ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -101,7 +101,7 @@
 <body id="body-send-email">
     <br>
     <br>
-    <a class="button button--flex" href="./index.php">
+    <a class="button button--flex" href="../../index.html">
         Voltar ao Portfólio
         <i class="uil uil-message button__icon"></i>
     </a>
