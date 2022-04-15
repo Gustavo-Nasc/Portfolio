@@ -28,7 +28,6 @@
         $mail->setFrom('gustavo.ns@outlook.com.br', 'Nova mensagem de Contato!');
         $mail->addAddress('gustavo.ns@outlook.com.br');
         $mail->addCC($email);
-        $mail->addCC('gunascsouza@gmail.com');
 
         $mail->Subject = 'Nova mensagem de Contato: ' . $subject;
 
