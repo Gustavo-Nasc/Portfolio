@@ -3,7 +3,7 @@
 
 Portfolio Website Responsive utilizando HTML, CSS e JavaScript, com uma bela interface de usuário. Contém um Header com Barra de Navegação, Início, Sobre mim, Habilidades, Qualificação, Serviços, Portfolio, Projeto em mente, Depoimento, Contato e Footer.
 
-![Resume cv](/preview.png)
+![Resume cv](./preview.png)
 
 ## 🚀 Tecnologias
 
