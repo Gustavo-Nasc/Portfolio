@@ -164,16 +164,6 @@ function scrollUp() {
 }
 window.addEventListener('scroll', scrollUp)
 
-/*==================== WHATSAPP BUTTON ====================*/
-function whatsapp() {
-    const whatsapp = document.getElementById('whatsapp');
-    // When the scroll is higher than 560 viewport height, add the show-whatsapp class to the a tag with the whatsapp class
-    if (this.scrollY >= 560)
-        whatsapp.classList.add('show-whatsapp');
-    else
-        whatsapp.classList.remove('show-whatsapp')
-}
-window.addEventListener('scroll', whatsapp)
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById('theme-button')

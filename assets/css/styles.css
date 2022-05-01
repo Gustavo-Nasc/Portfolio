@@ -1171,13 +1171,9 @@ form button {
   opacity: 1;
 }
 
-.whtasapp__icon {
+.whatsapp__icon {
   font-size: 2rem;
   color: #fff;
-}
-
-.show-whatsapp {
-  bottom: 5rem;
 }
 
 /*========== SCROLL BAR ==========*/
