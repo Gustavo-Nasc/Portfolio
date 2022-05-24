@@ -1,9 +1,21 @@
-<h1 align="center">Website Portfolio Responsivo</h1>
-<h2 align="center">Gustavo Nascimento Souza</h2>
+# Website Portfolio Responsivo
+## Gustavo Nascimento Souza
 
-Portfolio Website Responsive utilizando HTML, CSS e JavaScript, com uma bela interface de usuário. Contém um Header com Barra de Navegação, Início, Sobre mim, Habilidades, Qualificação, Serviços, Portfolio, Projeto em mente, Depoimento, Contato e Footer.
+Website de Portfolio Responsivo utilizando HTML, CSS, JavaScript e ScrollReveal, com uma bela interface de usuário.
 
-![Resume cv](./preview.png)
+Contém:
+- Header com Barra de Navegação
+- Início
+- Sobre mim
+- Habilidades
+- Qualificação
+- Serviços
+- Portfolio (Projetos realizados)
+- Projeto em mente
+- Depoimento
+- Contato e Footer.
+
+![Resume cv](./preview.jpg)
 
 ## 🚀 Tecnologias
 
@@ -12,6 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
 - CSS
 - JavaScript
+- [ScrollReveal](https://scrollrevealjs.org)
 
 ## 💻 Projeto
 
