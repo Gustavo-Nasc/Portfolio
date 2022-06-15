@@ -69,7 +69,7 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== SERVICES MODAL ====================*/
+/*==================== SERVICES MODAL  ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
     modalBtns = document.querySelectorAll('.services__button'),
     modalCloses = document.querySelectorAll('.services__modal-close')
@@ -84,7 +84,7 @@ modalBtns.forEach((modalBtn, i) => {
     })
 })
 
-modalCloses.forEach((modalClose, i) => {
+modalCloses.forEach((modalClose) => {
     modalClose.addEventListener('click', () => {
         modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
@@ -107,7 +107,7 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-});
+})
 
 /*==================== COMMENTS SWIPER ====================*/
 let swiper = new Swiper('.comments__container', {
@@ -120,7 +120,7 @@ let swiper = new Swiper('.comments__container', {
         el: '.swiper-pagination',
         dynamicBullets: true,
     }
-});
+})
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
@@ -147,7 +147,7 @@ function scrollHeader() {
     const nav = document.getElementById('header')
     // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
     if (this.scrollY >= 80)
-        nav.classList.add('scroll-header');
+        nav.classList.add('scroll-header')
     else
         nav.classList.remove('scroll-header')
 }
@@ -155,10 +155,10 @@ window.addEventListener('scroll', scrollHeader)
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollUp() {
-    const scrollUp = document.getElementById('scroll-up');
+    const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
     if (this.scrollY >= 560)
-        scrollUp.classList.add('show-scroll');
+        scrollUp.classList.add('show-scroll')
     else
         scrollUp.classList.remove('show-scroll')
 }
@@ -194,3 +194,212 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+/*GLOBAL*/
+sr.reveal('.section__title', {})
+sr.reveal('.section__subtitle', { delay: 100 })
+
+/*SCROLL HOME*/
+sr.reveal('.home__title', {})
+sr.reveal('.home__subtitle', { delay: 100 })
+sr.reveal('.home__description', { delay: 300 })
+sr.reveal('.home__button', { delay: 400 })
+sr.reveal('.home__img', { delay: 400 })
+sr.reveal('.home__social-icon', { interval: 200 })
+sr.reveal('.home__scroll', { delay: 600 })
+
+/*SCROLL ABOUT*/
+sr.reveal('.about__img', {})
+sr.reveal('.about__description', { delay: 300 })
+sr.reveal('.about__info-title', { interval: 200 })
+sr.reveal('.about__info-name', { delay: 100, interval: 300 })
+sr.reveal('.about__button', { delay: 200 })
+
+/*SCROLL SKILLS*/
+sr.reveal('.skills__content', { interval: 200 })
+
+/*SCROLL QUALIFICATION*/
+sr.reveal('.qualification__button', { interval: 200 })
+sr.reveal('.qualification__sections', { delay: 200 })
+
+/*SCROLL SERVICES*/
+sr.reveal('.services__content', { interval: 200 })
+
+/*SCOLL PORTFOLIO*/
+sr.reveal('.portfolio__container', {})
+sr.reveal('.swiper-button-prev', { delay: 200 })
+sr.reveal('.swiper-button-next', { delay: 400 })
+
+/*SCROLL PROJECT IN MIND*/
+sr.reveal('.project__title', { delay: 200 })
+sr.reveal('.project__description', { delay: 400 })
+sr.reveal('.project__button', { delay: 600 })
+sr.reveal('.project__img', { delay: 600 })
+
+/*SCROLL COMMENTS*/
+sr.reveal('.comments__name', { delay: 200 })
+sr.reveal('.comments__icon', { delay: 300 })
+sr.reveal('.comments__select', { delay: 500 })
+sr.reveal('.comments__description', { delay: 600 })
+
+/*SCROLL LEAVE A COMMENT*/
+sr.reveal('.rating__content', { delay: 400, interval: 200 })
+sr.reveal('.leave-comment__button', { delay: 600 })
+
+/*SCROOL CONTACT*/
+sr.reveal('.contact__information', { interval: 200 })
+sr.reveal('.contact__content', { interval: 200 })
+sr.reveal('.contact__button', { delay: 200 })
+
+/*SCROLL FOOTER*/
+sr.reveal('.footer__title', {})
+sr.reveal('.footer__subtitle', { delay: 200 })
+sr.reveal('.footer__link', { delay: 400, interval: 200 })
+sr.reveal('.footer__social', { interval: 200 })
+
+const Storage = {
+    get() {
+        return JSON.parse(localStorage.getItem('portfolio:comments')) || []
+    },
+
+    set(informations) {
+        localStorage.setItem("portfolio:comments", JSON.stringify(informations))
+    }
+}
+
+const Information = {
+    all: Storage.get(),
+
+    add(information) {
+        Information.all.push(information)
+
+        App.reload()
+    },
+
+    remove(index) {
+        Information.all.splice(index, 1)
+
+        App.reload()
+    }
+}
+
+
+/*==================== COMMENTS JS ====================*/
+
+//Substituir os dados do HTML com os dados do JS
+const DOM = {
+    commentContainer: document.querySelector('#swiper__comments'),
+
+    addComment(information, index) {
+        const commentDiv = document.createElement('div')
+        commentDiv.classList.add('comments__content')
+        commentDiv.classList.add('swiper-slide')
+
+        commentDiv.innerHTML = DOM.innerHTMLComment(information, index)
+
+        commentDiv.dataset.index = index
+
+        DOM.commentContainer.appendChild(commentDiv)
+    },
+
+    innerHTMLComment(information, index) {
+        const html = `
+        <div class="comments__data">
+            <div class="comments__header">
+                <div>
+                    <h3 class="comments__name">${information.name}</h3>
+                </div>
+            </div>
+            <i class="uil uil-minus-circle comments__icon" onclick="Information.remove(${index})">
+            <p class="comments__text">Remover comentário</p>
+        </i>
+            
+
+        </div>
+        <p class="comments__select">${information.rating}</p>
+        <p class="comments__description">
+            ${information.comment}
+        </p>
+        `
+
+        return html
+    },
+
+    clearInformations() {
+        DOM.commentContainer.innerHTML = ""
+    }
+}
+
+//Capturarar os Dados do Formulário HTML para o Array de Informações
+const Form = {
+    name: document.querySelector('input#name'),
+    rating: document.querySelector('select#rating'),
+    comment: document.querySelector('textarea#comment'),
+
+    getValues() {
+        return {
+            name: Form.name.value,
+            rating: Form.rating.value,
+            comment: Form.comment.value
+        }
+    },
+
+    validateFields() {
+        const { name, rating, comment } = Form.getValues()
+
+        if (name.trim() == "" ||
+            rating.trim() == "select" ||
+            comment.trim() == "") {
+            throw new Error("Por favor, preencha todos os campos")
+        }
+    },
+
+    clearFields() {
+        Form.name.value = ""
+        Form.rating.value = "select"
+        Form.comment.value = ""
+    },
+
+    submit(event) {
+        event.preventDefault()
+
+        try {
+            //Verificação se as informações foram preenchidas
+            Form.validateFields()
+
+            const information = Form.getValues()
+
+            //Salvar
+            Information.add(information)
+
+            //Apagar os dados do Formulário
+            Form.clearFields()
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+}
+
+const App = {
+    init() {
+        Information.all.forEach(DOM.addComment)
+
+        Storage.set(Information.all)
+    },
+
+    reload() {
+        DOM.clearInformations()
+
+        App.init()
+    }
+}
+
+App.init()

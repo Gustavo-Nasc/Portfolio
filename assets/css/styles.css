@@ -696,12 +696,12 @@ img {
   background-color: var(--container-color);
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
 
 .services__content:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .services__icon {
@@ -738,9 +738,9 @@ img {
   justify-content: center;
   padding: 0 1rem;
   z-index: var(--z-modal);
+  transition: 0.3s;
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
 }
 
 .services__modal-content {
@@ -756,6 +756,7 @@ img {
 
 .services__modal-service {
   display: flex;
+  gap: var(--mb-0-25);
 }
 
 .services__modal-title {
@@ -775,11 +776,6 @@ img {
 
 .services__modal-icon {
   color: var(--first-color);
-  margin-right: var(--mb-0-25);
-}
-
-.services__modal-close:hover {
-  color: var(--first-color-alt);
 }
 
 /* Active Modal */
@@ -852,8 +848,8 @@ img {
   right: -1rem;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets {
-  bottom: -2.5rem;
+.swiper-pagination {
+  bottom: -2.5rem !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -1278,6 +1274,10 @@ form button {
   .contact__container,
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project__container {
+    align-items: center;
   }
 
   .qualification__sections {
