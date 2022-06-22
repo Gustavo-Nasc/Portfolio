@@ -23,6 +23,8 @@
   --container-color: hsl(var(--hue-color), 60%, 95%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 70%);
+  --nav-link: hsl(var(--hue-color), 0%, 85%);
+  --nav-link-active: hsl(var(--hue-color), 0%, 95%);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -82,7 +84,6 @@ body.dark-theme {
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 30%);
 }
-
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -272,11 +273,42 @@ img {
 }
 
 
-/* Change background header */
+/* SCROLL HEADER */
 .scroll-header {
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.5);
+  background-color: var(--first-color);
 }
 
+.scroll-header .nav__logo {
+  color: var(--nav-link);
+}
+
+.scroll-header .nav__logo:hover {
+  color: var(--nav-link-active);
+}
+
+.scroll-header .nav__logo {
+  color: var(--nav-link);
+}
+
+.scroll-header .nav__link {
+  color: var(--nav-link);
+}
+
+.scroll-header .nav__link:hover {
+  color: var(--nav-link-active);
+}
+
+.scroll-header .active-link {
+  color: var(--nav-link-active);
+}
+
+.scroll-header #theme-button {
+  color: var(--nav-link);
+}
+
+.scroll-header #theme-button:hover {
+  color: var(--nav-link-active);
+}
 
 /*==================== HOME ====================*/
 .home__container {
@@ -499,6 +531,7 @@ img {
 
 .skill__titles-name-icon {
   display: flex;
+  align-items: center;
 }
 
 .skills__titles-icon {
@@ -532,23 +565,15 @@ img {
 }
 
 .skills__css {
-  width: 78%;
+  width: 80%;
 }
 
 .skills__js {
-  width: 32%;
-}
-
-.skills__react {
-  width: 0%;
-}
-
-.skills__php {
-  width: 20%;
+  width: 35%;
 }
 
 .skills__node {
-  width: 0%;
+  width: 7.5%;
 }
 
 .skills__firebase {
@@ -575,39 +600,6 @@ img {
 
 .skills__open .skills__arrow {
   transform: rotate(-180deg);
-}
-
-/*==================== SKILLS ICONS ====================*/
-.skills__icon-html {
-  color: #ec6231;
-}
-
-.skills__icon-css {
-  color: #2965f1;
-}
-
-.skills__icon-js {
-  color: #f0db4f;
-}
-
-.skills__icon-react {
-  color: #61dbf6;
-}
-
-.skills__icon-php {
-  color: #474a8a;
-}
-
-.skills__icon-node {
-  color: #3c873a;
-}
-
-.skills__icon-firebase {
-  color: #ffa611;
-}
-
-.skills__icon-angular {
-  color: #a6120d;
 }
 
 /*==================== QUALIFICATION ====================*/
