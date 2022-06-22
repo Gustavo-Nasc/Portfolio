@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Website de Portfolio Responsivo utilizando EJS, CSS, JavaScript e Node.js, com uma bela interface de usuário.",
   "main": "src/server.js",
   "scripts": {
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/Gustavo-Nasc/Portfolio.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gustavo Nascimento Souza",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gustavo-Nasc/Portfolio/issues"
   },
@@ -23,5 +23,9 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   }
 }

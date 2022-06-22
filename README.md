@@ -3,17 +3,7 @@
 
 Website de Portfolio Responsivo utilizando EJS, CSS, JavaScript e Node.js, com uma bela interface de usuário.
 
-Contém:
-- Header com Barra de Navegação
-- Início
-- Sobre mim
-- Habilidades
-- Qualificação
-- Serviços
-- Portfolio (Projetos realizados)
-- Projeto em mente
-- Depoimento
-- Contato e Footer.
+Contém: Header com Barra de Navegação, Início, Sobre mim, Habilidades, Qualificação, Serviços, Portfolio (Projetos realizados), Projeto em mente, Comentários, Contato e Footer.
 
 ![Resume cv](./.github/preview.jpg)
 
@@ -46,3 +36,8 @@ O Website Portfolio Responsivo é uma aplicação pessoal de constante atualiza�
 
 <strong>Observação: </strong>
 Use e abuse dos seus conhecimentos, insira Features, mais Elementos e Crie uma GitHub Page para seu Portfólio!
+
+## 📝Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./.github/LICENCE) para mais detalhes.
+
