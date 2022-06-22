@@ -15,7 +15,7 @@ Contém:
 - Depoimento
 - Contato e Footer.
 
-![Resume cv](./preview.jpg)
+![Resume cv](./.github/preview.jpg)
 
 ## 🚀 Tecnologias
 
@@ -26,13 +26,19 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 - [ScrollReveal](https://scrollrevealjs.org)
 
+## <img src="https://dashboard.snapcraft.io/site_media/appmedia/2018/05/Artboard_4.png" alt="NodeJS" width="22.5"> NodeJS
+
+- [NodeJS](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com)
+- [EJS](https://www.npmjs.com/package/ejs)
+- [Express](https://www.npmjs.com/package/express)
+- [Nodemon](https://www.npmjs.com/package/nodemon) (Dependência DEV)
+
+**Não esqueça de instalar as dependências acima**
+
 ## 💻 Projeto
 
 O Website Portfolio Responsivo é uma aplicação pessoal de constante atualização, onde será feita a publicação e divulgação pessoal
-
-## 📹 Vídeo Demonstrativo
-
-No meu LinkedIn tem um breve vídeo de como a aplicação funciona:
 
 ## ✍ Quer criar e personalizar o seu Portfólio?
 
