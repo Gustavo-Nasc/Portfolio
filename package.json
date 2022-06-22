@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Website de Portfolio Responsivo utilizando HTML, CSS, JavaScript e ScrollReveal, com uma bela interface de usuário.",
+  "version": "1.0.1",
+  "description": "Website de Portfolio Responsivo utilizando EJS, CSS, JavaScript e Node.js, com uma bela interface de usuário.",
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon ."

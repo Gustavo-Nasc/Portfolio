@@ -1,7 +1,7 @@
 # Website Portfolio Responsivo
 ## Gustavo Nascimento Souza
 
-Website de Portfolio Responsivo utilizando HTML, CSS, JavaScript e ScrollReveal, com uma bela interface de usuário.
+Website de Portfolio Responsivo utilizando EJS, CSS, JavaScript e Node.js, com uma bela interface de usuário.
 
 Contém:
 - Header com Barra de Navegação
