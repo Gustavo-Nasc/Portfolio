@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--===== META TAGS =====-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio pessoal referente à projetos criados e apresentação pessoal">
+    <meta name="keywords" content="Portfolio, Contato, Apresentação pessoal, Website, Responsivo,">
+    <meta name="author" content="Gustavo Nascimento Souza">
+
+    <!--===== UNICONS LINE =====-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--===== GLOBAL CSS =====-->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!--===== ADD PROJECT CSS =====-->
+    <link rel="stylesheet" href="./css/add-project.css">
+
+    <!--===== FAVICON =====-->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <!--===== PAGE TITLE =====-->
+    <title>Gustavo Nascimento Souza | Adicionar Projeto</title>
+</head>
+
+<body>
+    <section>
+        <h2 class="section__title">Adicionar um Projeto</h2>
+        <span class="section__subtitle">Adicione um projeto para que apareça na Página</span>
+        <form action="/project-added" method="POST" class="grid">
+            <div class="input-div">
+                <label for="title">Nome do Projeto</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="input-div">
+                <label for="description">Descrição do Projeto</label>
+                <textarea type="text" rows="3" id="description" name="description" required></textarea>
+            </div>
+            <div class="input-div">
+                <label for="image" class="input-file">Imagem do Projeto</label>
+                <input type="file" name="image" id="image" accept="image/png, image/jpg, image/jpeg" class="sr-only">
+                <span id="imageName"></span>
+            </div>
+            <div class="buttons-div">
+                <a href="/" class="button button--flex button--exit">
+                    <i class="uil uil-signout"></i>
+                    Voltar
+                </a>
+                <button class="button button--flex">
+                    Enviar
+                    <i class="uil uil-message"></i>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <script src="./js/add-project.js"></script>
+</body>
+
+</html>

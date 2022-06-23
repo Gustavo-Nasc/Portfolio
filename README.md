@@ -22,6 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [NPM](https://www.npmjs.com)
 - [EJS](https://www.npmjs.com/package/ejs)
 - [Express](https://www.npmjs.com/package/express)
+- [SQLite / SQLITE3](https://www.npmjs.com/package/sqlite)
 - [Nodemon](https://www.npmjs.com/package/nodemon) (Dependência DEV)
 
 **Não esqueça de instalar as dependências acima**
