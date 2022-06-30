@@ -20,7 +20,7 @@ if (navClose) {
 }
 
 /*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav-link')
 
 function linkAction() {
     navMenu.classList.remove('show-menu')
@@ -29,17 +29,17 @@ function linkAction() {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName('skills-content'),
+    skillsHeader = document.querySelectorAll('.skills-header')
 
 function toggleSkills() {
     let itemClass = this.parentNode.className
 
     for (i = 0; i < skillsContent.length; i++) {
-        skillsContent[i].className = 'skills__content skills__close'
+        skillsContent[i].className = 'skills-content skills-close'
     }
-    if (itemClass === 'skills__content skills__close') {
-        this.parentNode.className = 'skills__content skills__open'
+    if (itemClass === 'skills-content skills-close') {
+        this.parentNode.className = 'skills-content skills-open'
     }
 }
 
@@ -56,23 +56,23 @@ tabs.forEach(tab => {
         const target = document.querySelector(tab.dataset.target)
 
         tabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification__active')
+            tabContent.classList.remove('qualification-active')
         })
 
-        target.classList.add('qualification__active')
+        target.classList.add('qualification-active')
 
         tabs.forEach(tab => {
-            tab.classList.remove('qualification__active')
+            tab.classList.remove('qualification-active')
         })
 
-        tab.classList.add('qualification__active')
+        tab.classList.add('qualification-active')
     })
 })
 
 /*==================== SERVICES MODAL  ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close')
+const modalViews = document.querySelectorAll('.services-modal'),
+    modalBtns = document.querySelectorAll('.services-button'),
+    modalCloses = document.querySelectorAll('.services-modal-close')
 
 let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
@@ -93,7 +93,7 @@ modalCloses.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortfolio = new Swiper('.portfolio__container', {
+let swiperPortfolio = new Swiper('.portfolio-container', {
     cssMode: true,
     loop: true,
     autoplay: {
@@ -102,6 +102,7 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     },
     pagination: {
         el: '.swiper-pagination',
+        dynamicBullets: true,
     },
     navigation: {
         nextEl: '.swiper-button-next',
@@ -110,14 +111,15 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 })
 
 /*==================== COMMENTS SWIPER ====================*/
-let swiper = new Swiper('.comments__container', {
+let swiperComments = new Swiper('.comments-container', {
+    loop: true,
     grabCursor: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-comments',
         dynamicBullets: true,
     }
 })
@@ -134,9 +136,9 @@ function scrollActive() {
         const sectionId = current.getAttribute('id')
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
         } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
 }
@@ -204,63 +206,60 @@ const sr = ScrollReveal({
 })
 
 /*GLOBAL*/
-sr.reveal('.section__title', {})
-sr.reveal('.section__subtitle', { delay: 100 })
+sr.reveal('.section-title', {})
+sr.reveal('.section-subtitle', { delay: 100 })
 
 /*SCROLL HOME*/
-sr.reveal('.home__title', {})
-sr.reveal('.home__subtitle', { delay: 100 })
-sr.reveal('.home__description', { delay: 300 })
-sr.reveal('.home__button', { delay: 400 })
-sr.reveal('.home__img', { delay: 400 })
-sr.reveal('.home__social-icon', { interval: 200 })
-sr.reveal('.home__scroll', { delay: 600 })
+sr.reveal('.home-title', {})
+sr.reveal('.home-subtitle', { delay: 100 })
+sr.reveal('.home-description', { delay: 300 })
+sr.reveal('.home-button', { delay: 400 })
+sr.reveal('.home-img', { delay: 400 })
+sr.reveal('.home-social-icon', { interval: 200 })
+sr.reveal('.home-scroll', { delay: 600 })
 
 /*SCROLL ABOUT*/
-sr.reveal('.about__img', {})
-sr.reveal('.about__description', { delay: 300 })
-sr.reveal('.about__info-title', { interval: 200 })
-sr.reveal('.about__info-name', { delay: 100, interval: 300 })
-sr.reveal('.about__button', { delay: 200 })
+sr.reveal('.about-img', {})
+sr.reveal('.about-description', { delay: 300 })
+sr.reveal('.about-info-title', { interval: 200 })
+sr.reveal('.about-info-name', { delay: 100, interval: 300 })
+sr.reveal('.about-button', { delay: 200 })
 
 /*SCROLL SKILLS*/
-sr.reveal('.skills__content', { interval: 200 })
+sr.reveal('.skills-content', { interval: 200 })
 
 /*SCROLL QUALIFICATION*/
-sr.reveal('.qualification__button', { interval: 200 })
-sr.reveal('.qualification__sections', { delay: 200 })
+sr.reveal('.qualification-button', { interval: 200 })
+sr.reveal('.qualification-sections', { delay: 200 })
 
 /*SCROLL SERVICES*/
-sr.reveal('.services__content', { interval: 200 })
+sr.reveal('.services-content', { interval: 200 })
 
 /*SCOLL PORTFOLIO*/
-sr.reveal('.portfolio__container', {})
+sr.reveal('.portfolio-container', {})
 sr.reveal('.swiper-button-prev', { delay: 200 })
 sr.reveal('.swiper-button-next', { delay: 400 })
 
 /*SCROLL PROJECT IN MIND*/
-sr.reveal('.project__title', { delay: 200 })
-sr.reveal('.project__description', { delay: 400 })
-sr.reveal('.project__button', { delay: 600 })
-sr.reveal('.project__img', { delay: 600 })
+sr.reveal('.project-title', { delay: 200 })
+sr.reveal('.project-description', { delay: 400 })
+sr.reveal('.project-button', { delay: 600 })
+sr.reveal('.project-img', { delay: 600 })
 
 /*SCROLL COMMENTS*/
-sr.reveal('.comments__name', { delay: 200 })
-sr.reveal('.comments__icon', { delay: 300 })
-sr.reveal('.comments__select', { delay: 500 })
-sr.reveal('.comments__description', { delay: 600 })
+sr.reveal('.comments-container', { delay: 400 })
 
 /*SCROLL LEAVE A COMMENT*/
-sr.reveal('.rating__content', { delay: 400, interval: 200 })
-sr.reveal('.leave-comment__button', { delay: 600 })
+sr.reveal('.rating-content', { delay: 400, interval: 200 })
+sr.reveal('.leave-comment-button', { delay: 600 })
 
 /*SCROOL CONTACT*/
-sr.reveal('.contact__information', { interval: 200 })
-sr.reveal('.contact__content', { interval: 200 })
-sr.reveal('.contact__button', { delay: 200 })
+sr.reveal('.contact-information', { interval: 200 })
+sr.reveal('.contact-content', { interval: 200 })
+sr.reveal('.contact-button', { delay: 200 })
 
 /*SCROLL FOOTER*/
-sr.reveal('.footer__title', {})
-sr.reveal('.footer__subtitle', { delay: 200 })
-sr.reveal('.footer__link', { delay: 400, interval: 200 })
-sr.reveal('.footer__social', { interval: 200 })
+sr.reveal('.footer-title', {})
+sr.reveal('.footer-subtitle', { delay: 200 })
+sr.reveal('.footer-link', { delay: 400, interval: 200 })
+sr.reveal('.footer-social', { interval: 200 })

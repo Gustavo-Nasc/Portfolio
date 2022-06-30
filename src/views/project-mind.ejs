@@ -36,7 +36,7 @@
     <section>
         <h2 class="section-title">Adicionar um Projeto</h2>
         <span class="section-subtitle">Adicione um projeto para que apareça na Página</span>
-        <form action="/add-project" method="POST" class="grid">
+        <form action="/add-project-mind" method="POST" class="grid">
             <div class="input-div">
                 <label for="title">Nome do Projeto</label>
                 <input type="text" id="title" name="title" required>
@@ -46,17 +46,29 @@
                 <textarea rows="3" id="description" name="description" required></textarea>
             </div>
             <div class="input-div">
+                <label for="details">URL de Detalhes do Projeto</label>
+                <input type="text" id="details" name="details">
+            </div>
+            <div class="input-div">
                 <label for="image">URL da Imagem do Projeto</label>
-                <input type="text" name="image" id="image" required>
+                <input type="text" id="image" name="image" required>
             </div>
             <div class="input-div">
-                <label for="repository">URL do Repositório do Projeto</label>
-                <input type="text" name="repository" id="repository" required>
+                <label for="password">Senha ADM</label>
+                <input type="password" name="password" id="password">
             </div>
-            <div class="input-div">
-                <label for="page">URL da Page do Projeto</label>
-                <input type="text" name="page" id="page">
+            <div class="buttons-div">
+                <button class="button button-flex">
+                    Enviar
+                    <i class="uil uil-message"></i>
+                </button>
             </div>
+        </form>
+    </section>
+    <section>
+        <h2 class="section-title">Remover Projeto</h2>
+        <span class="section-subtitle">Remova o projeto atual</span>
+        <form action="/remove-project-mind" method="POST" class="grid">
             <div class="input-div">
                 <label for="password">Senha ADM</label>
                 <input type="password" name="password" id="password">

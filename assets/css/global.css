@@ -104,19 +104,19 @@ img {
     padding: 2rem 0 4rem;
 }
 
-.section__title {
+.section-title {
     font-size: var(--h1-font-size);
     color: var(--title-color);
 }
 
-.section__subtitle {
+.section-subtitle {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-3);
 }
 
-.section__title,
-.section__subtitle {
+.section-title,
+.section-subtitle {
     text-align: center;
 }
 
@@ -146,45 +146,61 @@ img {
     background-color: var(--first-color-alt);
 }
 
-.button__icon {
+.button-icon {
     font-size: 1.25rem;
     margin-left: var(--mb-0-5);
     transition: 0.3s;
 }
 
-.button--white {
+.button-white {
     background-color: #fff;
     color: var(--first-color);
 }
 
-.button--white:hover {
+.button-white:hover {
     background-color: #fff;
 }
 
-.button--flex {
+.button-flex {
     display: inline-flex;
     align-items: center;
 }
 
-.button--small {
+.button-small {
     padding: 0.75rem 1rem;
 }
 
-.button--link {
+.button-link {
     padding: 0;
     background-color: transparent;
     color: var(--first-color);
 }
 
-.button--link:hover {
+.button-link:hover {
     background-color: transparent;
     color: var(--first-color-alt);
 }
 
-.button--exit {
+.button-exit {
     background-color: hsl(0, 100%, 60%);
 }
 
-.button--exit:hover {
+.button-exit:hover {
     background-color: hsl(0, 100%, 55%);
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: 0.5rem;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 0.5rem;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
 }

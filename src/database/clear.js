@@ -8,6 +8,8 @@ const clearDB = {
 
         await db.exec(`DELETE FROM comments`)
 
+        await db.exec(`DELETE FROM projectInMind`)
+
         await db.close()
     }
 }

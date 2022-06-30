@@ -1,10 +1,11 @@
 {
   "name": "portfolio",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Website de Portfolio Responsivo utilizando EJS, CSS, JavaScript e Node.js, com uma bela interface de usuário.",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node .",
+    "dev": "nodemon .",
     "init-db": "node src/database/init.js",
     "clear-db": "node src/database/clear.js"
   },
