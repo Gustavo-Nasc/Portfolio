@@ -18,4 +18,7 @@ routes.get('/project-mind', (req, res) => res.render('project-mind'))
 routes.post('/add-project-mind', ProjectMindController.create)
 routes.post('/remove-project-mind', ProjectMindController.delete)
 
+routes.get('/remove-comment/:id', CommentsController.get)
+routes.post('/remove-comment/:id', CommentsController.delete)
+
 module.exports = routes

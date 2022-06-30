@@ -579,6 +579,9 @@
             <h2 class="section-title">Portfólio</h2>
             <span class="section-subtitle">Projetos pessoais mais recentes</span>
 
+            <% if (projects.length == 0) { %>
+            <h3>Sem projetos adicionados</h3>
+            <% } else { %>
             <div class="portfolio-container container swiper">
                 <div class="swiper-wrapper">
                     <% projects.forEach(project => { %>
@@ -619,12 +622,13 @@
                 <!--===== PAGINATION =====-->
                 <div class="swiper-pagination swiper-pagination-custom"></div>
             </div>
+            <% } %>
         </section>
 
         <!--===== PROJECT IN MIND =====-->
         <section class="project section" id="project">
             <div class="project-bg">
-                <div class="project-container container grid">
+                <div class="project-container container flex">
                     <% if(projectInMind == undefined) { %>
                     <h2>No momento, nenhum projeto em mente</h2>
                     <% } else { %>
@@ -633,11 +637,15 @@
                         <p class="project-description">
                             <%= projectInMind.description %>
                         </p>
+                        <% if(projectInMind.details == "") { %>
+                        <p class="sr-only">Sem detalhes</p>
+                        <% } else { %>
                         <a href="<%= projectInMind.details %>" class="button button-flex button-white project-button"
                             target="_blank">
                             Mais detalhes
                             <i class="uil uil-message project-icon button-icon"></i>
                         </a>
+                        <% } %>
                     </div>
 
                     <img src="<%= projectInMind.image %>" alt="" class="project-img">
@@ -651,6 +659,9 @@
             <h2 class="section-title">Comentários</h2>
             <span class="section-subtitle">Últimos comentários sobre o Projeto</span>
 
+            <% if (comments.length == 0) { %>
+            <h3>Sem comentários adicionados</h3>
+            <% } else { %>
             <div class="comments-container container swiper">
                 <div class="swiper-wrapper">
                     <% comments.forEach(comment => { %>
@@ -661,9 +672,11 @@
                                     <h3 class="comments-name"><%= comment.nameUser %> </h3>
                                 </div>
                             </div>
-                            <a class="uil uil-minus-circle comments-icon" href="/remove-comment">
-                                <p class="comments-text">Remover comentário</p>
-                            </a>
+                            <form action="/remove-comment/<%= comment.id %>">
+                                <button class="uil uil-minus-circle comments-icon">
+                                    <p class="comments-text">Remover comentário</p>
+                                </button>
+                            </form>
                         </div>
                         <p class="comments-select"><%= comment.rating %></p>
                         <p class="comments-description"><%= comment.comment %></p>
@@ -673,6 +686,7 @@
             </div>
             <!--===== PAGINATION =====-->
             <div class="swiper-pagination swiper-pagination-comments"></div>
+            <% } %>
         </section>
 
         <!--===== LEAVE A COMMENT =====-->

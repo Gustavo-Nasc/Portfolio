@@ -558,6 +558,11 @@ body.dark-theme {
   text-align: center;
 }
 
+#portfolio>h3 {
+  font-size: var(--h3-font-size);
+  text-align: center;
+}
+
 .portfolio-container {
   overflow: initial;
 }
@@ -638,6 +643,11 @@ body.dark-theme {
   padding: 3rem 0 3rem 0;
 }
 
+.project-container {
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .project-container>h2 {
   text-align: center;
   font-size: var(--h2-font-size);
@@ -660,7 +670,14 @@ body.dark-theme {
 
 .project-img {
   width: 232px;
-  justify-self: center;
+  align-self: center;
+  height: max-content;
+}
+
+/*===== COMMENTS ======*/
+#comments>h3 {
+  font-size: var(--h3-font-size);
+  text-align: center;
 }
 
 .comments-data,
@@ -671,6 +688,10 @@ body.dark-theme {
 .comments-data {
   justify-content: space-between;
   margin-bottom: var(--mb-1);
+}
+
+.comments-data button {
+  background: none;
 }
 
 .comments-name {
@@ -1021,7 +1042,6 @@ form button {
   .about-container,
   .skills-container,
   .portfolio-content,
-  .project-container,
   .contact-container,
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1029,6 +1049,8 @@ form button {
 
   .project-container {
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
   }
 
   .qualification-sections {
@@ -1039,6 +1061,10 @@ form button {
 }
 
 @media screen and (max-width: 567px) {
+  .project-img {
+    justify-self: center;
+  }
+
   .div-buttons-display {
     justify-content: space-around;
   }
@@ -1211,7 +1237,7 @@ form button {
     width: 450px;
   }
 
-  .portfolio-video {
+  .portfolio-image {
     width: 320px;
   }
 
@@ -1231,8 +1257,6 @@ form button {
     background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem;
-    grid-template-columns: 1fr max-content;
-    column-gap: 3rem;
   }
 
   .project-data {
