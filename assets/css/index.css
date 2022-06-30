@@ -638,6 +638,12 @@ body.dark-theme {
   padding: 3rem 0 3rem 0;
 }
 
+.project-container>h2 {
+  text-align: center;
+  font-size: var(--h2-font-size);
+  color: #fff;
+}
+
 .project-title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-75);

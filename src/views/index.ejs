@@ -624,10 +624,10 @@
         <!--===== PROJECT IN MIND =====-->
         <section class="project section" id="project">
             <div class="project-bg">
-                <% if(projectInMind == undefined) { %>
-                <h2>No momento, sem projeto em mente</h2>
-                <% } else { %>
                 <div class="project-container container grid">
+                    <% if(projectInMind == undefined) { %>
+                    <h2>No momento, nenhum projeto em mente</h2>
+                    <% } else { %>
                     <div class="project-data">
                         <h2 class="project-title"><%= projectInMind.title %></h2>
                         <p class="project-description">
