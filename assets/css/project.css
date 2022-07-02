@@ -50,8 +50,9 @@ button {
     font-size: var(--font-medium);
 }
 
-a i.uil-signout {
+a i {
     margin-right: var(--mb-0-5);
+    font-size: 1rem;
 }
 
 button i.uil-message {

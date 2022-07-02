@@ -24,7 +24,7 @@ module.exports = {
 
             await db.close()
 
-            res.redirect('/')
+            res.render('parts/confirm-project')
         } else {
             res.render('parts/incorrect-password')
         }

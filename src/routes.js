@@ -3,6 +3,7 @@ const ProjectController = require('./controllers/ProjectController')
 const ProjectMindController = require('./controllers/ProjectMindController')
 const CommentsController = require('./controllers/CommentsController')
 const PortfolioController = require('./controllers/PortfolioController')
+const SendMailController = require('./controllers/SendMailController')
 
 const routes = express.Router()
 
@@ -20,5 +21,7 @@ routes.post('/remove-project-mind', ProjectMindController.delete)
 
 routes.get('/remove-comment/:id', CommentsController.get)
 routes.post('/remove-comment/:id', CommentsController.delete)
+
+routes.post('/send-mail', SendMailController.send)
 
 module.exports = routes
