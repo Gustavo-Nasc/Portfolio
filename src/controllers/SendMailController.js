@@ -26,6 +26,9 @@ module.exports = {
             subject: subject,
             html: `
                 <body style="font-family: 'Century Gothic', sans-serif">
+                    <p style="font-size: 20px; font-weight: 700; border-bottom: 1px solid #000;">De:</p>
+                    <p style="font-size: 16px; margin-bottom: 40px">${name}</p>
+                    <p style="font-size: 20px; font-weight: 700; border-bottom: 1px solid #000;">Mensagem:</p>
                     <p style="font-size: 16px; margin-bottom: 80px">${message}</p>
                     <p style="font-size: 14px">Veja mais projetos de Gustavo Nascimento em:</p>
                     <div style="border-radius: 5px; width: max-content; display: flex; background-color: #211F1F; padding: 16px">

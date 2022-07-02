@@ -36,10 +36,28 @@ O Website Portfolio Responsivo é uma aplicação pessoal de constante atualiza�
 
 [Faça você mesmo!](https://youtu.be/27JtRAI3QO8)
 
-<strong>Observação: </strong>
-Use e abuse dos seus conhecimentos, insira Features, mais Elementos e Crie uma GitHub Page para seu Portfólio!
+**Observação:** Use e abuse dos seus conhecimentos, insira Features, mais Elementos e Crie uma GitHub Page para seu Portfólio!
+
+## 📄 Página do Projeto
+https://portfolio-gustavo-nascimento.herokuapp.com/
+
+## 💻 Acesse o projeto local
+#### ✅ Requisitos
+Antes de começar, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados.
+
+#### 🏁 Começo
+```bash
+# Clone o projeto
+$ git clone https://github.com/Gustavo-Nasc/Portfolio
+# Acesse
+$ cd Portfolio/
+# Instale as dependências
+$ npm install
+# Execute o projeto
+$ npm run dev
+# O servidor será inicializado e poderá ser acessado por: <http://localhost:3000>
+```
 
 ## 📝Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./.github/LICENCE) para mais detalhes.
-
