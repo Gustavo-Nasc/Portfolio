@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import './globals.css'
+import '@/styles/globals.css'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Gustavo Nascimento Souza',
-      url: 'https://github.com/Gustavo-Nasc'
-    }
-  ]
+      url: 'https://github.com/Gustavo-Nasc',
+    },
+  ],
 }
 
 export default function RootLayout({
