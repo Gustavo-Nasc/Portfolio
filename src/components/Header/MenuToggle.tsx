@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-function Path(props: any) {
+function Path({ ...props }) {
   return (
     <motion.path
       fill="transparent"
@@ -18,7 +18,7 @@ interface MenuToggleProps {
 
 export function MenuToggle({ toggle }: MenuToggleProps) {
   return (
-    <button onClick={toggle}>
+    <button onClick={toggle} className="relative left-[7px] top-[1px]">
       <svg width="24" height="24" viewBox="0 0 24 24">
         <Path
           variants={{

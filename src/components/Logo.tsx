@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
 const variants = {
@@ -18,10 +17,10 @@ const variants = {
   },
 }
 
-interface MenuItemProps {
-  children: ReactNode
-}
-
-export function MenuItem({ children }: MenuItemProps) {
-  return <motion.li variants={variants}>{children}</motion.li>
+export function Logo() {
+  return (
+    <motion.p variants={variants} className="absolute right-6 top-8 uppercase">
+      <span className="font-bold">Gustavo</span>Souza
+    </motion.p>
+  )
 }

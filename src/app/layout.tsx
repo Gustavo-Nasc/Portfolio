@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${primary.className} ${secondary.variable}`}>
+      <body
+        className={`overflow-y-hidden ${primary.className} ${secondary.variable}`}
+      >
         {children}
       </body>
     </html>

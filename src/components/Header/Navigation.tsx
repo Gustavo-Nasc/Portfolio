@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { MenuItem } from './MenuItem'
+import { Logo } from '../Logo'
 
 const variants = {
   open: {
@@ -13,10 +14,11 @@ const variants = {
 export function Navigation() {
   return (
     <motion.ul
-      className="absolute right-0 top-[78px] flex h-[calc(100vh-78px)] w-screen flex-col gap-2"
+      className="fixed bottom-0 left-0 right-0 top-0 flex flex-col gap-3 px-6 pt-[88px]"
       variants={variants}
     >
-      <MenuItem name="Home" />
+      <Logo />
+      <MenuItem>Home</MenuItem>
     </motion.ul>
   )
 }
