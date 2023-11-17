@@ -19,7 +19,7 @@ const variants = {
 
 export function Logo() {
   return (
-    <motion.p variants={variants} className="absolute right-6 top-8 uppercase">
+    <motion.p variants={variants} className="relative z-[1] uppercase">
       <span className="font-bold">Gustavo</span>Souza
     </motion.p>
   )

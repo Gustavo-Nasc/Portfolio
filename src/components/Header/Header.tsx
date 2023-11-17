@@ -3,10 +3,11 @@ import { motion, useCycle } from 'framer-motion'
 import { useDimensions } from './use-dimensions'
 import { MenuToggle } from './MenuToggle'
 import { Navigation } from './Navigation'
+import { Logo } from '../Logo'
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 42.5px 42.5px)`,
+    clipPath: `circle(${height * 2 + 200}px at -25px -25px)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -14,7 +15,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: 'circle(25px at 42.5px 42.5px)',
+    clipPath: 'circle(25px at -25px -25px)',
     transition: {
       delay: 0.5,
       type: 'spring',
@@ -30,7 +31,8 @@ export function Header() {
   const { height } = useDimensions(containerRef)
 
   return (
-    <header className="bg-blue-500 px-6 py-8 shadow-md shadow-slate-300">
+    <header className="flex justify-between px-6 py-8 shadow-md shadow-gray-300">
+      <Logo />
       <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}

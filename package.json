@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-switch": "^1.0.3",
     "framer-motion": "^10.16.4",
     "next": "14.0.1",
     "react": "^18",

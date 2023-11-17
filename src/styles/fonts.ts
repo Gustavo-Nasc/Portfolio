@@ -1,6 +1,6 @@
-import { Poppins, Jost } from 'next/font/google'
+import { Outfit, Jost } from 'next/font/google'
 
-export const primary = Poppins({
+export const primary = Outfit({
   weight: ['400', '700'],
   subsets: ['latin'],
 })

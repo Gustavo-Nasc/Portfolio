@@ -18,7 +18,7 @@ const variants = {
   },
 }
 
-interface MenuItemProps {
+type MenuItemProps = {
   children: ReactNode
 }
 

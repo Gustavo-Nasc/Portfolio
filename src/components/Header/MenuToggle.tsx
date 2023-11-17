@@ -12,13 +12,13 @@ function Path({ ...props }) {
   )
 }
 
-interface MenuToggleProps {
+type MenuToggleProps = {
   toggle: () => void
 }
 
 export function MenuToggle({ toggle }: MenuToggleProps) {
   return (
-    <button onClick={toggle} className="relative left-[7px] top-[1px]">
+    <button onClick={toggle} className="relative">
       <svg width="24" height="24" viewBox="0 0 24 24">
         <Path
           variants={{

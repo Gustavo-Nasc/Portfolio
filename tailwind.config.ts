@@ -13,8 +13,10 @@ const config: Config = {
       },
       colors: {
         primary: {
-          100: '#CCD5FF',
-          400: '#3355ff',
+          500: '#4e2ac3',
+        },
+        gray: {
+          900: '#2a2a2a',
         },
       },
       fontSize: {
