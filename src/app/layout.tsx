@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
 import { primary, secondary } from '@/styles/fonts'
+import { FramerMotionConfig } from '@/lib/MotionConfig'
+import { NextThemesProvider } from '@/lib/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Gustavo N. Souza | Portfólio',
@@ -25,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`overflow-y-hidden ${primary.className} ${secondary.variable}`}
+        className={`antialiased ${primary.className} ${secondary.variable} bg-white text-gray-800 dark:bg-gray-800 dark:text-white`}
       >
-        {children}
+        <FramerMotionConfig>
+          <NextThemesProvider>{children}</NextThemesProvider>
+        </FramerMotionConfig>
       </body>
     </html>
   )

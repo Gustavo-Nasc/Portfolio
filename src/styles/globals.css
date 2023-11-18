@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button,
+a {
+  @apply outline-none focus:shadow-border focus:shadow-black
+  dark:focus:shadow-white;
+}

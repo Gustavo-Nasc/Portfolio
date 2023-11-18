@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 function Path({ ...props }) {
   return (
     <motion.path
-      fill="transparent"
+      fill="currentColor"
       strokeWidth="3"
-      stroke="hsl(0, 0%, 18%)"
+      className="stroke-gray-900 dark:stroke-white"
       strokeLinecap="round"
       {...props}
     />
@@ -19,7 +19,7 @@ type MenuToggleProps = {
 export function MenuToggle({ toggle }: MenuToggleProps) {
   return (
     <button onClick={toggle} className="relative">
-      <svg width="24" height="24" viewBox="0 0 24 24">
+      <svg width="24" height="21" viewBox="0 0 24 21">
         <Path
           variants={{
             closed: { d: 'M 2 2.5 L 20 2.5' },

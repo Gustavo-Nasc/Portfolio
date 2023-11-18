@@ -8,6 +8,7 @@ import { Logo } from '../Logo'
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at -25px -25px)`,
+    display: 'block',
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -16,6 +17,7 @@ const sidebar = {
   }),
   closed: {
     clipPath: 'circle(25px at -25px -25px)',
+    display: 'none',
     transition: {
       delay: 0.5,
       type: 'spring',
@@ -31,17 +33,17 @@ export function Header() {
   const { height } = useDimensions(containerRef)
 
   return (
-    <header className="flex justify-between px-6 py-8 shadow-md shadow-gray-300">
+    <header className="fixed flex w-full justify-between px-6 py-8 shadow-md shadow-gray-300 dark:shadow-gray-900">
       <Logo />
       <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
-        className="h-6"
+        className="h-5"
       >
         <motion.div
-          className="fixed bottom-0 left-0 top-0 w-screen bg-white"
+          className="fixed bottom-0 left-0 top-0 w-screen bg-white dark:bg-gray-700"
           variants={sidebar}
         />
         <Navigation />

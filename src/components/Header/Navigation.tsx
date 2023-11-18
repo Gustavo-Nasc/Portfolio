@@ -2,13 +2,24 @@ import { motion } from 'framer-motion'
 import { MenuItem } from './MenuItem'
 import { Button } from '../Button'
 import * as Switch from '@radix-ui/react-switch'
+import { useThemes } from '@/hooks/useThemes'
 
 const list = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    x: 0,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
+    },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    x: '100%',
+    transition: {
+      y: { stiffness: 1000 },
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
   },
 }
 
@@ -30,6 +41,12 @@ const elements = {
 }
 
 export function Navigation() {
+  const { changeTheme, isDarkTheme } = useThemes()
+
+  function handleChangeTheme() {
+    changeTheme()
+  }
+
   return (
     <motion.ul
       className="fixed bottom-0 left-0 right-0 top-0 flex flex-col gap-6 px-6 pt-[88px]"
@@ -39,16 +56,18 @@ export function Navigation() {
         variants={elements}
         className="flex items-center justify-between"
       >
-        <label htmlFor="dark-mode">Dark Theme</label>
+        <label htmlFor="dark-mode">Tema Escuro</label>
         <Switch.Root
-          className={`relative h-8 w-12 rounded-full bg-gray-900
-            focus:shadow-black `}
+          className="relative h-8 w-[52px] rounded-full bg-gray-800 dark:bg-primary-500"
           id="dark-mode"
+          checked={isDarkTheme}
+          aria-label="Alterar Tema"
+          onCheckedChange={handleChangeTheme}
         >
           <Switch.Thumb
             className={`block h-6 w-6 translate-x-1 rounded-full
             bg-white transition-transform duration-200
-            will-change-transform data-[state=checked]:translate-x-5
+            will-change-transform data-[state=checked]:translate-x-6
           `}
           />
         </Switch.Root>
