@@ -14,7 +14,13 @@ const config: Config = {
       },
       colors: {
         primary: {
+          50: '#f8f7fd',
+          400: '#8a70e1',
           500: '#4e2ac3',
+        },
+        seconday: {
+          400: '#646466',
+          500: '#9a9a9a',
         },
         gray: {
           700: '#121212',

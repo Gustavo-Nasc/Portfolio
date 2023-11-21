@@ -33,7 +33,7 @@ export function Header() {
   const { height } = useDimensions(containerRef)
 
   return (
-    <header className="fixed flex w-full justify-between px-6 py-8 shadow-md shadow-gray-300 dark:shadow-gray-900">
+    <header className="fixed top-0 z-10 flex w-full justify-between px-4 py-6 shadow-md shadow-gray-300 dark:shadow-gray-900">
       <Logo />
       <motion.nav
         initial={false}

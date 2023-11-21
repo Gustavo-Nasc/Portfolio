@@ -4,6 +4,6 @@
 
 button,
 a {
-  @apply outline-none focus:shadow-border focus:shadow-black
-  dark:focus:shadow-white;
+  @apply outline-none focus:ring-2 focus:ring-black
+  dark:focus:ring-white;
 }

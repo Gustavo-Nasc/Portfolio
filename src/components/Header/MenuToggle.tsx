@@ -5,7 +5,7 @@ function Path({ ...props }) {
     <motion.path
       fill="currentColor"
       strokeWidth="3"
-      className="stroke-gray-900 dark:stroke-white"
+      className="stroke-gray-900 group-focus:border-2 group-focus:border-black dark:stroke-white dark:group-focus:border-white"
       strokeLinecap="round"
       {...props}
     />
@@ -18,7 +18,7 @@ type MenuToggleProps = {
 
 export function MenuToggle({ toggle }: MenuToggleProps) {
   return (
-    <button onClick={toggle} className="relative">
+    <button onClick={toggle} className="group relative focus:ring-0">
       <svg width="24" height="21" viewBox="0 0 24 21">
         <Path
           variants={{

@@ -78,7 +78,7 @@ export function Navigation() {
       <MenuItem>Tech Stack</MenuItem>
       <MenuItem>Serviços</MenuItem>
       <MenuItem>Projetos</MenuItem>
-      <Button className="mt-4" variants={elements}>
+      <Button className="mt-4" padding="menu" variants={elements}>
         Contato
       </Button>
     </motion.ul>

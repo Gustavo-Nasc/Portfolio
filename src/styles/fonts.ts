@@ -1,6 +1,6 @@
-import { Outfit, Jost } from 'next/font/google'
+import { Jost, Red_Hat_Display as RedHatDisplay } from 'next/font/google'
 
-export const primary = Outfit({
+export const primary = RedHatDisplay({
   weight: ['400', '700'],
   subsets: ['latin'],
 })
